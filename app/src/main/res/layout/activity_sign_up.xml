@@ -17,51 +17,65 @@
 
         <com.rengwuxian.materialedittext.MaterialEditText
             android:id="@+id/edtPhone"
-            android:hint="Phone Numper"
-            android:textColorHint="@android:color/white"
-            android:text=""
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textColor="@android:color/white"
-            android:textSize="30sp"
+            android:hint="Phone Numper"
             android:inputType="phone"
+            android:text="01234565789"
+            android:textColor="@android:color/white"
+            android:textColorHint="@android:color/white"
+            android:textSize="30sp"
             app:met_baseColor="@android:color/white"
             app:met_floatingLabel="highlight"
             app:met_maxCharacters="11"
             app:met_primaryColor="@android:color/white"
-            app:met_singleLineEllipsis="true"
-            />
+            app:met_singleLineEllipsis="true" />
+
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:id="@+id/edtName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Name"
+            android:inputType="text"
+            android:text="Adel Emam"
+            android:textColor="@android:color/white"
+            android:textColorHint="@android:color/white"
+            android:textSize="30sp"
+            app:met_baseColor="@android:color/white"
+            app:met_floatingLabel="highlight"
+            app:met_maxCharacters="11"
+            app:met_primaryColor="@android:color/white"
+            app:met_singleLineEllipsis="true" />
+
 
         <com.rengwuxian.materialedittext.MaterialEditText
             android:id="@+id/edtPassword"
-            android:hint="Password"
-            android:textColorHint="@android:color/white"
-            android:text=""
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textColor="@android:color/white"
-            android:textSize="30sp"
+            android:hint="Password"
             android:inputType="textPassword"
+            android:text="0000"
+            android:textColor="@android:color/white"
+            android:textColorHint="@android:color/white"
+            android:textSize="30sp"
             app:met_baseColor="@android:color/white"
             app:met_floatingLabel="highlight"
             app:met_maxCharacters="11"
             app:met_primaryColor="@android:color/white"
-            app:met_singleLineEllipsis="true"
-            />
+            app:met_singleLineEllipsis="true" />
     </LinearLayout>
 
     <info.hoang8f.widget.FButton
-        android:id="@+id/btnSignIn"
+        android:id="@+id/btnSignUp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_marginRight="8dp"
-        android:layout_marginLeft="8dp"
-        android:text="@string/sign_in"
-        android:textColor="@android:color/white"
-        app:shadowColor="@android:color/black"
         android:layout_margin="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:text="@string/sign_up"
+        android:textColor="@android:color/white"
         app:buttonColor="@color/teal_200"
-        />
+        app:shadowColor="@android:color/black" />
 
 </RelativeLayout>

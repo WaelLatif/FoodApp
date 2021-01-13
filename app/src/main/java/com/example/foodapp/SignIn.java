@@ -31,14 +31,14 @@ public class SignIn extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_in);
 
-        edtPassword = (MaterialEditText) findViewById(R.id.edtPassword);
-        edtPhone = (MaterialEditText) findViewById(R.id.edtPhone);
+        edtPassword = findViewById(R.id.edtPassword);
+        edtPhone = findViewById(R.id.edtPhone);
 
         btnSignIn = findViewById(R.id.btnSignIn);
 
         //init Firebase
-        final FirebaseDatabase database = FirebaseDatabase.getInstance();
-        final DatabaseReference table_user = database.getReference("User");
+         FirebaseDatabase database = FirebaseDatabase.getInstance();
+         DatabaseReference table_user = database.getReference("User");
 
         btnSignIn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -49,15 +49,16 @@ public class SignIn extends AppCompatActivity {
 
                 table_user.addValueEventListener(new ValueEventListener() {
                     @Override
-                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                    public void onDataChange(DataSnapshot dataSnapshot) {
 
                         // check if user not exist on database
                         if (dataSnapshot.child(edtPhone.getText().toString()).exists()) {
                             //get User Information
                             mDialog.dismiss();
                             User user = dataSnapshot.child(edtPhone.getText().toString()).getValue(User.class);
+                            assert user != null;
                             if (user.getPassword().equals(edtPassword.getText().toString())) {
-                                Toast.makeText(SignIn.this, "Sign in Successfully !", Toast.LENGTH_LONG).show();
+                                Toast.makeText(SignIn.this, "Sign in Successfully !", Toast.LENGTH_SHORT).show();
                             } else {
                                 Toast.makeText(SignIn.this, "Sign in Failed !!!", Toast.LENGTH_LONG).show();
                             }

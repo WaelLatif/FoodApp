@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">FoodApp</string>
+    <string name="slogan">where ever you are : you are at home , you are at office , or on the beach - we will find you and we will feed you.</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="sign_in">Sign In</string>
+    <string name="todo">TODO</string>
+</resources>

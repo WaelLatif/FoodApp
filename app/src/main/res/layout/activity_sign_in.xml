@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/bg"
-    tools:context=".SignIn">
+    tools:context="com.example.foodapp.SignIn">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -19,7 +19,7 @@
             android:id="@+id/edtPhone"
             android:hint="Phone Numper"
             android:textColorHint="@android:color/white"
-            android:text=""
+            android:text="01225795822"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textColor="@android:color/white"
@@ -36,7 +36,7 @@
             android:id="@+id/edtPassword"
             android:hint="Password"
             android:textColorHint="@android:color/white"
-            android:text=""
+            android:text="123456"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textColor="@android:color/white"

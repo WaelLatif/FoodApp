@@ -3,6 +3,7 @@
     package="com.example.foodapp">
 
     <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -10,9 +11,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.FoodApp">
-        <activity android:name=".SignUp" />
-        <activity android:name=".SignIn" />
-        <activity android:name=".MainActivity">
+        <activity
+            android:name="com.example.foodapp.Home"
+            android:label="@string/title_activity_home"
+            android:theme="@style/Theme.FoodApp.NoActionBar">
+
+        </activity>
+        <activity android:name="com.example.foodapp.SignUp" />
+        <activity android:name="com.example.foodapp.SignIn" />
+        <activity android:name="com.example.foodapp.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

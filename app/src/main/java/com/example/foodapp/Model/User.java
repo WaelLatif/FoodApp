@@ -1,6 +1,4 @@
-package Model;
-
-import java.security.PrivateKey;
+package com.example.foodapp.Model;
 
 public class User {
     private String Name;

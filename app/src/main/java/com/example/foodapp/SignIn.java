@@ -1,6 +1,7 @@
 package com.example.foodapp;
 
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -16,9 +17,9 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
-import com.rengwuxian.materialedittext.MaterialEditText;
 
-import Model.User;
+import com.example.foodapp.Common.Common;
+import com.example.foodapp.Model.User;
 
 public class SignIn extends AppCompatActivity {
 
@@ -58,7 +59,10 @@ public class SignIn extends AppCompatActivity {
                             User user = dataSnapshot.child(edtPhone.getText().toString()).getValue(User.class);
                             assert user != null;
                             if (user.getPassword().equals(edtPassword.getText().toString())) {
-                                Toast.makeText(SignIn.this, "Sign in Successfully !", Toast.LENGTH_SHORT).show();
+                               Intent homeIntent = new Intent(SignIn.this,Home.class);
+                                Common.currentUser=user;
+                               startActivity(homeIntent);
+                               finish();
                             } else {
                                 Toast.makeText(SignIn.this, "Sign in Failed !!!", Toast.LENGTH_LONG).show();
                             }
